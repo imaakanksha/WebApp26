@@ -1,0 +1,32 @@
+﻿@model WebApp26.Models.UserCredentials
+@{
+    ViewBag.Title = "LatestCandidate";
+}
+
+<h2>LatestCandidate</h2>
+
+
+
+<style>
+    table {
+        width: 80%;
+        margin: 20px auto;
+        text-align: center;
+    }
+</style>
+
+<div style="margin-top: 20px;"></div>
+
+<table border="1">
+    <tr>
+        <td colspan="3">@Model.Username</td>
+    </tr>
+    <tr>
+        <td>@Model.CreatedDate</td>
+        <td>@Model.Gender</td>
+        <td>@Model.Password</td>
+    </tr>
+    <tr>
+        <td colspan="3">@Model.Address</td>
+    </tr>
+</table>

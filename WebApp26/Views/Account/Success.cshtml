@@ -1,0 +1,25 @@
+﻿@model WebApp26.Models.UserCredentials
+
+<h2>Registration Successful!</h2>
+
+<p>Your username and password have been saved successfully.</p>
+
+<button id="changePasswordBtn" class="btn btn-primary">Change Password</button>
+
+@Html.ActionLink("View Latest Candidate", "LatestCandidate", "Account")
+@Html.ActionLink("View All Candidates", "DisplayData", "Account")
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#changePasswordBtn").click(function() {
+            var url = '@Url.Action("ChangePassword", "Account")';
+            var win = window.open(url, "Change Password", "width=500,height=400");
+            if (win) {
+                win.focus();
+            } else {
+                alert('Please allow pop-ups for this site');
+            }
+        });
+    });
+</script>

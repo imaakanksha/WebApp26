@@ -1,0 +1,32 @@
+﻿@model List<WebApp26.Models.UserCredentials>
+@{
+    ViewBag.Title = "DisplayData";
+}
+
+<h2>DisplayData</h2>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>CreatedDate</th>
+            <th>Gender</th>
+            <th>Password</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Username</td>
+                <td>@user.CreatedDate</td>
+                <td>@user.Gender</td>
+                <td>@user.Password</td>
+                <td>@user.Address</td>
+            </tr>
+        }
+    </tbody>
+</table>
